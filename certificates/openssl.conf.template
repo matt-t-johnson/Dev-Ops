@@ -1,0 +1,22 @@
+[req]
+default_bits = 2048
+distinguished_name = req_distinguished_name
+prompt = no
+default_md = sha256
+
+[ENV_PLACEHOLDER]
+commonName = COMMON_NAME ENV_PLACEHOLDER
+
+[req_distinguished_name]
+countryName = US
+stateOrProvinceName = North Carolina
+localityName = Raleigh
+organizationName = NAME
+organizationalUnitName = NAME
+commonName = $ENV_PLACEHOLDER::commonName
+emailAddress = EMAIL
+
+[v3_ca]
+basicConstraints = CA:TRUE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier=keyid:always,issuer:always

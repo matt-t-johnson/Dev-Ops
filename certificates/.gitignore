@@ -1,0 +1,12 @@
+# Certificate results
+*.key
+*.crt
+*.csr
+*.cer
+*.srl
+*.conf
+*.pfx
+
+
+# Bane of Mac Development
+*.DS_Store
